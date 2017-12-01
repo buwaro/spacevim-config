@@ -57,7 +57,7 @@ function! UserConfig()
   inoremap fd <ESC>
 
   " leader-vim menu items
-  nmap <silent> <leader>ft :NERDTreeToggli<CR>
+  nmap <silent> <leader>ft :NERDTreeToggle<CR>
   nmap <silent> <leader>pi :PlugInstall<CR>
 
   " remap change windows keys to ctrl
