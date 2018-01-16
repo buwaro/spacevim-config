@@ -35,6 +35,9 @@ endfunction
 " Override the default settings as well as adding extras
 function! UserConfig()
 
+  " overflow text to the next line
+  set wrap
+
   " If you have installed the powerline fonts and want to enable airline layer
   " let g:airline_powerline_fonts=1
 
