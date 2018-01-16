@@ -69,4 +69,7 @@ function! UserConfig()
   nmap <silent> <C-h> :wincmd h<CR>
   nmap <silent> <C-l> :wincmd l<CR>
 
+  " cntrlP fuzzy search
+  nmap <silent> <C-p> :Files<CR>
+
 endfunction
