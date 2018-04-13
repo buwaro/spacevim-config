@@ -2,7 +2,7 @@
 My personal spacevim configuration
 
 ## Clone this repo
-- `cd sources`
+- `cd ~/sources` (or any other location you prefer)
 - `git clone https://github.com/buwaro/spacevim-config`
 
 ## Install neovim
@@ -15,10 +15,13 @@ My personal spacevim configuration
 - `cd ~/.space-vim`
 - `make neovim`
 
-## Use the config file
+## Use the spacevim config file
 - **Remove the generated spacevim config:** `rm ~/.spacevim`
-- **Symlink my confing to the original spacevim config location:** `ln -s ` 
+- **Symlink the spacevim config from the project:** `ln -s ~/sources/spacevim-coinfig/.space-vim`
 
-## install plugins
+## Install plugins
 - **Open nvim:** `nvim`
 - **Install vim plugins:** `:PlugInstall`
+
+## Use the tmux config file (optional)
+- **Symlink the tmux config from the project:** `ln -s ~/sources/spacevim-coinfig/.space-vim`
