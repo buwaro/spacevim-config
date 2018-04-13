@@ -73,4 +73,7 @@ function! UserConfig()
   " cntrlP fuzzy search
   nmap <silent> <C-p> :Files<CR>
 
+  " set 2 spaces for tabs
+  :set tabstop=2 shiftwidth=2 expandtab
+
 endfunction
