@@ -25,3 +25,4 @@ My personal spacevim configuration
 
 ## Use the tmux config file (optional)
 - **Symlink the tmux config from the project:** `ln -s ~/sources/spacevim-coinfig/.space-vim`
+- **Reload the tmux config:** `tmux source-file ~/.tmux.conf`
