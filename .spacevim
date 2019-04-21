@@ -31,6 +31,11 @@ function! UserInit()
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
+  Plug 'dart-lang/dart-vim-plugin'
+  Plug 'natebosch/vim-lsc'
+  Plug 'w0rp/ale'
+  Plug 'thosakwe/vim-flutter'
+
 endfunction
 
 " Override the default settings as well as adding extras
@@ -45,14 +50,13 @@ function! UserConfig()
   " Use gui colors in terminal if available
   if has('termguicolors')
     set termguicolors
-    if g:spacevim_tmux
+    if g:spacevim.tmux
       " If use vim inside tmux, see https://github.com/vim/vim/issues/993
       " set Vim-specific sequences for RGB colors
       let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
       let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
     endif
   endif
-
 
   " Show The leader guide
   nnoremap <silent> <leader> :<c-u>LeaderGuide '<Space>'<CR>
@@ -76,4 +80,14 @@ function! UserConfig()
   " set 2 spaces for tabs
   :set tabstop=2 shiftwidth=2 expandtab
 
+  " vim-lsc settings
+  let g:lsc_server_commands = {'dart': 'dart_language_server'}
+  let g:lsc_auto_map = v:true
+  autocmd CompleteDone * silent! pclose
+
+ " vim-flutter settings
+  nmap <leader>fa :FlutterRun<cr>
+  nmap <leader>fq :FlutterQuit<cr>
+  nmap <leader>fr :FlutterHotReload<cr>
+  nmap <leader>fR :FlutterHotRestart<cr>
 endfunction
