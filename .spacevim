@@ -12,7 +12,6 @@ function! Layers()
   Layer 'unite'
   Layer 'better-defaults'
   Layer 'vue'
-  " Layer 'lsp'
 
 endfunction
 
@@ -36,7 +35,6 @@ function! UserInit()
   Plug 'tpope/vim-fugitive'
   Plug 'airblade/vim-gitgutter'
   Plug 'dart-lang/dart-vim-plugin'
-  " Plug 'natebosch/vim-lsc'
   Plug 'w0rp/ale'
   Plug 'thosakwe/vim-flutter'
   Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
@@ -85,28 +83,11 @@ function! UserConfig()
   " set 2 spaces for tabs
   :set tabstop=2 shiftwidth=2 expandtab
 
-  " " vim-lsc settings
-  " set shortmess-=F
-  " let g:lsc_server_commands = {'dart': 'dart_language_server'}
-  " let g:lsc_auto_map = v:true
-  " autocmd CompleteDone * silent! pclose
-
  " vim-flutter settings
   nmap <leader>fa :FlutterRun<cr>
   nmap <leader>fq :FlutterQuit<cr>
   nmap <leader>fr :FlutterHotReload<cr>
   nmap <leader>fR :FlutterHotRestart<cr>
-
-  " lsp
-  " au User lsp_setup call lsp#register_server({
-  "     \ 'name': 'javascript support using typescript-language-server',
-  "     \ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
-  "     \ 'root_uri':{server_info->lsp#utils#path_to_uri(lsp#utils#find_nearest_parent_file_directory(lsp#utils#get_buffer_path(), 'package.json'))},
-  "     \ 'whitelist': ['javascript', 'javascript.jsx'],
-  "     \ })
-
-
-  " let g:ale_completion_enabled = 1
 
   " prevent deoplete from auto inserting the selected drop down item
   set completeopt+=noinsert
