@@ -28,7 +28,6 @@ function! UserInit()
   " Install personal plugins
   Plug 'hecal3/vim-leader-guide'
   Plug 'scrooloose/nerdtree'
-  Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-rails'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-fugitive'
@@ -38,6 +37,8 @@ function! UserInit()
   Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
   Plug 'sheerun/vim-polyglot'
   Plug 'tiagofumo/dart-vim-flutter-layout'
+  Plug 'tyru/caw.vim' " context aware commenting
+  Plug 'Shougo/context_filetype.vim' " context aware commenting
 
 endfunction
 
