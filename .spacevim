@@ -36,6 +36,7 @@ function! UserInit()
   Plug 'thosakwe/vim-flutter'
   Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
   Plug 'sheerun/vim-polyglot'
+  Plug 'storyn26383/vim-vue'
   Plug 'tiagofumo/dart-vim-flutter-layout'
   Plug 'tyru/caw.vim' " context aware commenting
   Plug 'Shougo/context_filetype.vim' " context aware commenting
@@ -227,4 +228,14 @@ function! UserConfig()
   "
   " end coc settings
   "
+
+  " polyglot settings
+  let g:polyglot_disabled = ['vue']
+
+  " ale settings
+  let g:ale_sign_error = '✘'
+  let g:ale_sign_warning = '⚠'
+  highlight ALEErrorSign ctermbg=NONE ctermfg=red
+  highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
+
 endfunction
