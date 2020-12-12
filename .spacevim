@@ -46,6 +46,10 @@ endfunction
 " Override the default settings as well as adding extras
 function! UserConfig()
 
+  "speedup text scrolling
+  set lazyredraw " fast redraw of screen
+  let g:vim_current_word#enabled = 0 "disable current word highlighting
+
   " overflow text to the next line
   set wrap
 
