@@ -8,7 +8,7 @@
 function! Layers()
 
   " Default layers
-  Layer 'fzf'
+  " Layer 'fzf'
   Layer 'unite'
   Layer 'better-defaults'
 
@@ -40,15 +40,25 @@ function! UserInit()
   Plug 'tiagofumo/dart-vim-flutter-layout'
   Plug 'tyru/caw.vim' " context aware commenting
   Plug 'Shougo/context_filetype.vim' " context aware commenting
+  Plug 'ryanoasis/vim-devicons'
 
 endfunction
 
 " Override the default settings as well as adding extras
 function! UserConfig()
 
+  " Automatically reload buffer when a file has changed externally
+  set autoread
+  au FocusGained,BufEnter * :checktime " Trigger on buffer change or terminal focus
+  au CursorHold,CursorHoldI * checktime " Trigger when cursor stops moving
+  " set -g focus-events on " Catching terminal window focus inside plain vim
+
   "speedup text scrolling
   set lazyredraw " fast redraw of screen
-  let g:vim_current_word#enabled = 0 "disable current word highlighting
+  let g:vim_current_word#highlight_twins = 0
+  let g:vim_current_word#highlight_current_word = 0
+  let g:vim_current_word#enabled = 0
+  " set noshowmatch
 
   " overflow text to the next line
   set wrap
@@ -242,4 +252,8 @@ function! UserConfig()
   highlight ALEErrorSign ctermbg=NONE ctermfg=red
   highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
 
+  " Nerd fonts
+  let g:webdevicons_enable_nerdtree = 1
+  let g:webdevicons_conceal_nerdtree_brackets = 1
+  let g:webdevicons_enable_ctrlp = 1
 endfunction
