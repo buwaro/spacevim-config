@@ -25,14 +25,14 @@ My personal spacevim configuration
 
 ## Use the spacevim config file
 - **Remove the generated spacevim config:** `rm ~/.spacevim`
-- **Symlink the spacevim config from the project:** `ln -s ~/sources/spacevim-config/.spacevim`
+- **Symlink the spacevim config from the project:** `ln -s ~/sources/spacevim-config/.spacevim ~/.`
 
 ## Install plugins
 - **Open nvim:** `nvim`
 - **Install vim plugins:** `:PlugInstall`
 
 ## Use the tmux config file (optional)
-- **Symlink the tmux config from the project:** `ln -s ~/sources/spacevim-config/.space-vim`
+- **Symlink the tmux config from the project:** `ln -s ~/sources/spacevim-config/.tmux.conf ~/.`
 - **Reload the tmux config:** `tmux source-file ~/.tmux.conf`
 
 ## Setup Nerd fonts
@@ -51,4 +51,4 @@ My personal spacevim configuration
 
 ## Alacritty
 > **note:** This config uses the Hack Nerd Font
-- **Symlink alacritty config:** `ln -s ~/sources/spacevim-config/.alacritty.yml ~/.config/alacritty/.`
+- **Symlink alacritty config:** `ln -s ~/sources/spacevim-config/alacritty.yml ~/.config/alacritty/.`

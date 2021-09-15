@@ -41,6 +41,8 @@ function! UserInit()
   Plug 'tyru/caw.vim' " context aware commenting
   Plug 'Shougo/context_filetype.vim' " context aware commenting
   Plug 'ryanoasis/vim-devicons'
+  Plug 'lotabout/skim', { 'dir': '~/.skim', 'do': './install' }
+  Plug 'lotabout/skim.vim'
 
 endfunction
 
