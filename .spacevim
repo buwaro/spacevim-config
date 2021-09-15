@@ -31,10 +31,11 @@ function! UserInit()
   Plug 'tpope/vim-rails'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-fugitive'
-  Plug 'airblade/vim-gitgutter'
-  Plug 'w0rp/ale'
+  " Plug 'airblade/vim-gitgutter'
+  Plug 'liuchengxu/eleline.vim'
+  " Plug 'w0rp/ale'
   Plug 'thosakwe/vim-flutter'
-  Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'sheerun/vim-polyglot'
   Plug 'storyn26383/vim-vue'
   Plug 'tiagofumo/dart-vim-flutter-layout'
@@ -135,9 +136,9 @@ function! UserConfig()
   " Use tab for trigger completion with characters ahead and navigate.
   " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
   inoremap <silent><expr> <TAB>
-        \ pumvisible() ? "\<C-n>" :
-        \ <SID>check_back_space() ? "\<TAB>" :
-        \ coc#refresh()
+       \ pumvisible() ? "\<C-n>" :
+       \ <SID>check_back_space() ? "\<TAB>" :
+       \ coc#refresh()
   inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
   function! s:check_back_space() abort
@@ -209,15 +210,15 @@ function! UserConfig()
 
   " Add diagnostic info for https://github.com/itchyny/lightline.vim
   let g:lightline = {
-        \ 'colorscheme': 'wombat',
-        \ 'active': {
-        \   'left': [ [ 'mode', 'paste' ],
-        \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
-        \ },
-        \ 'component_function': {
-        \   'cocstatus': 'coc#status'
-        \ },
-        \ }
+       \ 'colorscheme': 'wombat',
+       \ 'active': {
+       \   'left': [ [ 'mode', 'paste' ],
+       \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
+       \ },
+       \ 'component_function': {
+       \   'cocstatus': 'coc#status'
+       \ },
+       \ }
 
 
 
